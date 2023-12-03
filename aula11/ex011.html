@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qual seu país?</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 18px;
+        }
+        input {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Qual o Seu País?</h1>
+    Seu País: <input type="text" name="txtpais" id="txtpais">
+    <input type="button" value="Verificar" onclick="Calcular()">
+    <div id="res">
+
+    </div>
+    <script>
+        function Calcular() {
+            var txtpaís = window.document.getElementById('txtpais')
+            var país = (txtpaís.value)
+            res.innerHTML = `<p>Seu país é <strong>${país}</strong>!</p>`
+            if (país == 'Brasil') {
+                res.innerHTML += `<p>Você é <strong>brasileiro!</strong></p>`
+            } else {
+                res.innerHTML += `<p>Você é <strong>estrangeiro!</strong></p>`
+            }
+        }
+    </script>
+</body>
+</html>
